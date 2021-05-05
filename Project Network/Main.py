@@ -64,8 +64,8 @@ classes = ('plane', 'car', 'bird', 'cat',
                'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
 
 criterion = nn.CrossEntropyLoss()
-optimizer = optim.SGD(net.parameters(), lr=0.05, momentum=0.9, weight_decay=0) # TODO: Look at ADAM optimizer
-scheduler = ReduceLROnPlateau(optimizer, 'min', patience=5)
+optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9, weight_decay=0) # TODO: Look at ADAM optimizer
+scheduler = ReduceLROnPlateau(optimizer, 'min', patience=3)
 #%%
 
 def train(net):
