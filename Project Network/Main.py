@@ -18,8 +18,9 @@ class Net(nn.Module):
         self.batch2 = nn.BatchNorm2d(128)
         self.pool = nn.MaxPool2d(2, 2)
         self.fc1 = nn.Linear(128 * 5 * 5, 2048) # TODO: Increase out features to more than 220
-        self.fc2 = nn.Linear(2048, 184) # TODO: Change 220 to match ^. Increase out feature to more than 184
-        self.fc3 = nn.Linear(184, 10) # TODO: Change 184 to match ^
+        self.fc2 = nn.linear(2048, 1024)
+        self.fc3 = nn.Linear(1024, 184) # TODO: Change 220 to match ^. Increase out feature to more than 184
+        self.fc4 = nn.Linear(184, 10) # TODO: Change 184 to match ^
         
     def forward(self, x):
         x = self.pool(F.relu(self.batch1(self.conv1(x))))
@@ -27,7 +28,8 @@ class Net(nn.Module):
         x = x.view(x.size(0), -1)
         x = F.relu(self.fc1(x))
         x = F.relu(self.fc2(x))
-        x = self.fc3(x)
+        x = F.relu(self.fc3(x))
+        x = self.fc4(x)
         return x
 net = Net()
 #%%
