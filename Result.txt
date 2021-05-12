@@ -1,0 +1,22 @@
+[1,  2000] loss: 1.814
+[1,  4000] loss: 1.574
+[2,  2000] loss: 1.394
+[2,  4000] loss: 1.333
+[3,  2000] loss: 1.242
+[3,  4000] loss: 1.214
+[4,  2000] loss: 1.165
+[4,  4000] loss: 1.147
+[5,  2000] loss: 1.102
+[5,  4000] loss: 1.099
+Finished Training
+Accuracy of the network on the 10000 test images: 60 %
+Accuracy for class plane is: 69.4 %
+Accuracy for class car   is: 79.6 %
+Accuracy for class bird  is: 36.4 %
+Accuracy for class cat   is: 42.6 %
+Accuracy for class deer  is: 57.0 %
+Accuracy for class dog   is: 43.4 %
+Accuracy for class frog  is: 69.3 %
+Accuracy for class horse is: 62.5 %
+Accuracy for class ship  is: 72.0 %
+Accuracy for class truck is: 72.1 %
